@@ -38,7 +38,7 @@ function App() {
                     <h3>Weather: </h3><p
                     className="place">{theData.weather !== undefined ? theData.weather[0].description : ""}</p>
                 </div>
-                <div><h2 className="coordination">Coordination </h2>
+                <div><h2 className="coordinations">Coordinations </h2>
                     <div className={"field"}>
                         <h3>lat:</h3><p className={"field"}>
                         {theData.coord !== undefined ? theData.coord.lat : ''}</p>
