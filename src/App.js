@@ -6,14 +6,13 @@ function App() {
     const [city, setCity] = useState("Tunisia")
     const [theData, setTheData] = useState([])
     useEffect(() => {
-        console.log(process.env.REACT_APP_MY_API_KEY)
         const API_KEY= process.env.REACT_APP_MY_API_KEY
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`).then((response) => response.json()).then(
             (actualData) => {
                 setTheData(actualData)
             }
         ).catch(err => {
-            console.log('Error ', err.message)
+            console.log('city not found')
         })
     }, [city])
     return (
